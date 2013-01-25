@@ -1,0 +1,1 @@
+function(e){var f=this.getZclass(),d=this.uuid;e.push("<span ",this.domAttrs_(),">");e.push(this._text);e.push("</span>")};

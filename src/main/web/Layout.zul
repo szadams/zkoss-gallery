@@ -1,0 +1,100 @@
+<zk>
+	<window id="main" title="Galeria w ZKOSS" width="1024px" height="760px"
+		border="normal" apply="my.gallery.mvc.CatController" sclass="wind">
+		<label value="Kocia galeria" sclass="headerText"></label>
+		<vbox sclass="inside">
+			<hbox style="margin-top:20px">
+				<button id="prevButton" label="Poprzedni"
+					style="position:relative;top: 120px;left: -100%;" />
+				<vbox>
+					<label id="name" sclass="catsname" value="Latający kot" />
+					<image id="pic" src="img/flying.gif" />
+					<label id="comment" sclass="catscomment" value="Nie pacz w dół." />
+				</vbox>
+				<button id="nextButton" label="Następny"
+					style="position:relative;top: 120px;right: -100%;" />
+			</hbox>
+		</vbox>
+
+		<include id="inner" />
+		<!-- <button label="Edytuj" onClick='inner.src = "CatEdit.zul"' /> -->
+
+		<hbox sclass="functions">
+			<button id="editButton" label="Edytuj" />
+			<button id="addButton" label="Dodaj kota" />
+			<vbox id="vboxEdit" visible="false">
+				<hbox>
+					<label>Nazwa</label>
+					<textbox id="nameTextbox"></textbox>
+				</hbox>
+				<hbox>
+					<label>Komentarz</label>
+					<textbox id="commentTextbox"></textbox>
+				</hbox>
+				<hbox>
+					<label>Obrazek</label>
+					<textbox id="pictureTextbox"></textbox>
+				</hbox>
+				<button id="saveCatButton" label="Zapisz" />
+			</vbox>
+			<vbox id="vboxAdd" visible="false">
+				<hbox>
+					<label>Nazwa</label>
+					<textbox id="addNameTextbox"></textbox>
+				</hbox>
+				<hbox>
+					<label>Komentarz</label>
+					<textbox id="addCommentTextbox"></textbox>
+				</hbox>
+				<hbox>
+					<label>Obrazek</label>
+					<textbox id="addPictureTextbox"></textbox>
+				</hbox>
+				<button id="addCatButton" label="Dodaj" />
+			</vbox>
+		</hbox>
+	</window>
+	<style>
+		body {
+		background: #87A6B8;
+		}
+		.wind {
+		margin-left:auto;
+		margin-right:auto;
+		}
+		.z-window-embedded-cnt {
+		background: #F0F9FA;
+		}
+		.inside {
+		margin-left:auto;
+		margin-right:auto;
+		}
+		.headerText {
+		position:relative;
+		font-weight: bold;
+		font-size: 20px;
+		margin-left:auto;
+		margin-right:auto;
+		left: 42%;
+		top: 10px;
+		}
+		img {
+		-webkit-border-radius: 8px; /* Safari,
+		Chrome */
+		-khtml-border-radius: 8px; /* Konqueror */
+		-moz-border-radius: 8px; /* Firefox */
+		border-radius: 8px;
+		}
+		.catsname {
+		font-weight: bold;
+		}
+		.catscomment {
+		font-style: italic;
+		}
+		.functions {
+		position: relative;
+		left: 300px;
+		top: 20px;
+		}
+	</style>
+</zk>
